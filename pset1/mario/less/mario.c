@@ -8,16 +8,21 @@ int main(void)
     do
     {
         n = get_int("Positive number: ");
-    } while (n <= 0);
+    } 
+    while (n <= 0);
 
     // Print out bricks for given number
+    // Print out rows
     for (int i = 0; i < n; i++)
     {
-        printf("#\n");
+        // Print out columns
+        for (int j = 0; j < n; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
     }
 }
-
-
 
 // TODO
 // Promt and validate user input
