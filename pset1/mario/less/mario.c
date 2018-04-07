@@ -1,6 +1,24 @@
 #include <cs50.h>
 #include <stdio.h>
 
+int main(void)
+{
+    // Promt user for a positve number
+    int n;
+    do
+    {
+        n = get_int("Positive number: ");
+    } while (n <= 0);
+
+    // Print out bricks for given number
+    for (int i = 0; i < n; i++)
+    {
+        printf("#\n");
+    }
+}
+
+
+
 // TODO
 // Promt and validate user input
 // draw the half pyrimid
@@ -25,12 +43,3 @@
     - print hashes
     - print a new line
 */
-
-int main(void)
-{
-    int n = get_int("Number: ");
-    for (int i = 0; i < n; i++) {
-        printf("?");
-    }
-    printf("\n");
-}
