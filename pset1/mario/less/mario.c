@@ -15,7 +15,7 @@
 
          #
         ##
-        ###
+       ###
       ####
      #####
     ######
@@ -25,3 +25,9 @@
     - print hashes
     - print a new line
 */
+
+int main(void)
+{
+    printf("????\n");
+}
+

@@ -2,7 +2,7 @@
 
 ## Examples
 
-### Types 
+### Types
 
 1. `hello.c`
 1. `string.c`
