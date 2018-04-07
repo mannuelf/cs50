@@ -28,6 +28,9 @@
 
 int main(void)
 {
-    printf("????\n");
+    int n = get_int("Number: ");
+    for (int i = 0; i < n; i++) {
+        printf("?");
+    }
+    printf("\n");
 }
-
