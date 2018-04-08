@@ -4,21 +4,25 @@
 int main(void)
 {
     // Promt user for a positve number
-    int n;
+    int height;
     do
     {
-        n = get_int("Positive number: ");
+        height = get_int("Height: ");
     } 
-    while (n <= 0);
+    while (height <= 0);
 
     // Print out bricks for given number
     // Print out rows
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < height; i++)
     {
         // Print out columns
-        for (int j = 0; j < n; j++)
-        {
-            printf("#");
+        for (int j = 0; j < height; j++)
+        {        
+            printf("  ");
+            for (int k = 0; k < height; k++)
+            {
+                printf("#");
+            }
         }
         printf("\n");
     }
