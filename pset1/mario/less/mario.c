@@ -1,33 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(void)
-{
-    // Promt user for a positve number
-    int height;
-    do
-    {
-        height = get_int("Height: ");
-    } 
-    while (height <= 0);
-
-    // Print out bricks for given number
-    // Print out rows
-    for (int i = 0; i < height; i++)
-    {
-        // Print out columns
-        for (int j = 0; j < height; j++)
-        {        
-            printf("  ");
-            for (int k = 0; k < height; k++)
-            {
-                printf("#");
-            }
-        }
-        printf("\n");
-    }
-}
-
 // TODO
 // Promt and validate user input
 // draw the half pyrimid
@@ -39,16 +12,42 @@ int main(void)
 
 /*
     The Mario Pyramid
-
          #
         ##
        ###
       ####
      #####
     ######
-
     for every row: 
     - print spaces
     - print hashes
     - print a new line
 */
+
+int main(void)
+{
+    int height;
+
+    do
+    {
+        printf("Please choose number between 1 and 23: ");
+        height = get_int();
+    } while (height < 0 || height > 23);
+
+    // for each line repeat
+    for (int line = 0; line < height; line++)
+    {
+
+        for (int spaces = height - line; spaces > 1; spaces--)
+        {
+            printf(" ");
+        }
+
+        for (int hashes = 0; hashes < line + 2; hashes++)
+        {
+            printf("#");
+        }
+
+        printf("\n");
+    }
+}
