@@ -4,11 +4,11 @@
 
 int main(void)
 {
+    float n;
     do
     {
-
+        printf("Change owed: ");
+        n = get_float();
     }
-    while();
-
-    printf("Change owed: ");
+    while(n < 0);
 }
