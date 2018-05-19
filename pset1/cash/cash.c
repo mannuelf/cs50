@@ -17,7 +17,7 @@ int main(void)
     {
         printf("How much change do I owe you? $ ");
         money = get_float();
-        money = roundf(money);
+        money = (int) round(money);
         balance = money * 100;
     }
     while(money < 0);
