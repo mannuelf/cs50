@@ -10,8 +10,8 @@ int main(void)
     int DIMES = 10;
     int NICKEL = 5;
     int PENNIES = 1;
-    int balance;
-    int coins;
+    int balance = 0;
+    int coins = 0;
 
     do
     {
@@ -26,7 +26,11 @@ int main(void)
     // while quarters can be used
     coins += balance / QUARTER; // increase amount
     balance %= QUARTER; // amount decreased by a QUARTER
-     
+    
+    // while nickel can be used
+    coins += balance / NICKEL; // increase amount
+    balance %= NICKEL; // amount decrease by a nickel
+
     // while dimes can be used
     coins += balance / DIMES; // increase amount
     balance %= DIMES; // amount decrease by a dime
