@@ -10,6 +10,8 @@ int main(void)
     int DIMES = 10;
     int NICKEL = 5;
     int PENNIES = 1;
+
+    int change_owed;
     int balance = 0;
     int coins = 0;
 
@@ -19,29 +21,35 @@ int main(void)
         amount_given = get_float();
     }
     while (amount_given < 0);
-    
+
     // round input to cents
-    balance = (int)(amount_given * 100.0);
+    balance = round(change_owed * 100);
+    printf("Change owed: %d\n", balance);
 
     // while quarters can be used
     coins += balance / QUARTER; // increase amount
     balance %= QUARTER; // amount decreased by a QUARTER
-    
+    printf("coins %i. balance %i. DIMES %i.\n", coins, balance, QUARTER);
+
     // while nickel can be used
     coins += balance / NICKEL; // increase amount
     balance %= NICKEL; // amount decrease by a nickel
+    printf("coins %i. balance %i. DIMES %i.\n", coins, balance, NICKEL);
 
     // while dimes can be used
     coins += balance / DIMES; // increase amount
     balance %= DIMES; // amount decrease by a dime
-    
+    printf("coins %i. balance %i. DIMES %i.\n", coins, balance, DIMES);
+
     // while pennies can used
     coins += balance / PENNIES; // increase amount
     balance %= PENNIES; // amount decrease by a penny
-    
+    // Testing
+    printf("coins %i. balance %i. PENNIES %i.\n", coins, balance, PENNIES);
+
     // print number of coins used
-    printf("Numbers of coins needed: %i\n", coins);
-    printf("Your change is: %i\n", balance);
+    // printf("Numbers of coins needed: %i\n", coins);
+    // printf("Your change is: %i\n", balance);
 }
 
 
