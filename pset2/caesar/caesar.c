@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 
@@ -14,7 +15,34 @@ int main(int argc, string argv[])
             // shift plaintext character by key
     // print ciphertext
 
-    int k = atoi(argv[1]);
-    string plaintext = get_string("plaintext: ");
-    printf("ciphertext: %s\n", plaintext);
+    if (argc == 2)
+    {
+        int key = atoi(argv[1]);
+        printf("plaintext: ");
+
+        string userInput = get_string();
+        printf("ciphertext: ");
+        
+        for (int i = 0, j = strlen(userInput); i < j; i++)
+        {
+            if (isalpha(userInput[i]))
+            {
+                if (isupper(userInput[i]))
+                {
+                    printf("%c", (((userInput[i] - 97) + key) % 26) + 65);
+                } 
+                else 
+                {
+                    printf("%c", (((userInput[i] - 97) + key) % 26) + 97);
+                }
+            }
+        }
+    }
+    else
+    {
+        printf("ERRRRRR!!\n");
+        return 1;
+    }
+    printf("\n");
+    return 0;
 }
