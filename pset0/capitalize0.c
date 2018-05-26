@@ -6,7 +6,6 @@ int main(void)
 {
     string s = get_string("before: ");
     printf("after: ");
-
     for (int i = 0, n = strlen(s); i < n; i++)
     {
         if (s[i] >= 'a' && s[i] <= 'z') // if the i'th index of s is greater than or equal to a and z
