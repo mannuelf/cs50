@@ -5,10 +5,10 @@
 
 int main()
 {
-    // Promt user for x
+    // Prompt user for x
     float x = get_float("x: ");
 
-    // Promt user for y
+    // Prompt user for y
     float y = get_float("y: ");
 
     // Perform arithmetic
